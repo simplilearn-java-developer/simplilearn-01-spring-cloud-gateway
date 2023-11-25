@@ -1,0 +1,19 @@
+# Server Port
+server.port: 8765
+  
+# Server Name
+spring:
+  application.name: api-gateway
+# Discovery Locator
+  cloud.gateway.discovery.locator:
+    enabled: true 
+    lowerCaseServiceId: true
+           
+
+# Enable Actuator
+management.endpoints.web.exposure.include: "*"
+
+# Eureka Server URL
+eureka.client:
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka/
